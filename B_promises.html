@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function task1() {
+    return new Promise((resolve) => {
+        console.log("Task 1 is done");
+        resolve();
+    });
+}
+
+function task2() {
+    return new Promise((resolve) => {
+        console.log("Task 2 is done");
+        resolve();
+    });
+}
+
+function task3() {
+    return new Promise((resolve) => {
+        console.log("Task 3 is done");
+        resolve();
+    });
+}
+
+task1()
+    .then(task2)
+    .then(task3)
+    .then(() => console.log("All tasks are done"))
+    .catch((error) => console.log(error));
+
+    </script>
+</body>
+</html>

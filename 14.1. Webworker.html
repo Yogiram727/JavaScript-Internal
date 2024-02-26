@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="start()">Start web worker</button>
+        <input type="text">
+        <script>
+     function start(){
+        console.log("worker's result will be here");
+            const worker=new Worker("14.Webworker.js");//name of js file 
+            worker.postMessage("");//will trigger onmessage event handler in worker thread
+            worker.onmessage=(e)=>{
+                console.log(e.data);
+            }
+            
+       }
+       
+    </script>
+</body>
+</html>

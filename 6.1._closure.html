@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head>
+   <title>Closure Function </title>
+</head>
+<body>
+    <script>
+    outer();
+          function outer(){
+            var k="outer function variable";
+            //document.write(k+"<br>");
+                function inner(){
+                    var l="inner function variable";
+                    document.write(l+"<br>");
+                    document.write(k+"<br>");
+                    
+                }
+            inner();  
+          }
+          document.write(l);
+    </script>
+</body>
+</html>

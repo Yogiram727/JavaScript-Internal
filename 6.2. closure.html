@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+<head>
+   <title>Closure Function </title>
+</head>
+<body>
+    <script>
+    outer();
+          function outer(){
+            var y="outer variable";
+            inner();  
+                function inner(){
+                    var x="inner function variable";
+                    console.log(x);
+                    console.log(y);//outer variable called from inner function 
+
+                    
+                }
+                document.write(x);//inner function variable can't be accessed by outer function
+
+          }
+    </script>
+</body>
+</html>

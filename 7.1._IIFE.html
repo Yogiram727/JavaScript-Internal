@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>IIFE</title>
+</head>
+<body>
+    <script>
+        fun();
+        function fun(){
+            var x=10;
+            document.write(x);
+            
+        }
+        (()=>{
+             var x =40;
+            document.write(x);
+            
+            
+        })();
+        
+        function fun(){
+            var x=10;
+            document.write(x);
+        }
+
+        (()=>{
+             var x ="IIFE";
+            document.write(x);
+        })();
+        
+        
+    </script>
+</body>
+</html>

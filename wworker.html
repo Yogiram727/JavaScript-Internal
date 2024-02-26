@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn" onclick="start()">Click me </button>
+    <input type="text">
+
+  <script>
+    function start(){
+        console.log("Result of calculation will be here after sometime");
+    var w=new Worker("w.js");
+    w.postMessage("");
+    w.onmessage=(e)=>{
+        console.log(e.data);
+    }
+
+    }
+  </script>  
+</body>
+</html>

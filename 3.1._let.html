@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var Keyword</title>
+</head>
+<body>
+    <script>
+            fun();
+            function fun(){
+                let b=20;
+                document.write(b+"<br>");
+                for(let i=1;i<=5;i++)
+                {
+                 //c cannot be accessed outside this block
+
+                    let c=4444;
+                    document.write(i+"<br>"); 
+                }
+                document.write(c+"<br>"); //this wont work as c is blocked variable
+            }
+        document.write(b+"<br>");
+    </script>
+</body>
+</html>
